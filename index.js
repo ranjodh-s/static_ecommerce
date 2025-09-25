@@ -8,12 +8,6 @@ const pool = new Pool({
   connectionString: "postgresql://neondb_owner:npg_NO2tcbvumYH5@ep-aged-moon-a17x14tx-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 });
 
-async function testDB() {
-  const res = await pool.query("SELECT * FROM users;");
-  console.log(res.rows);
-}
-testDB();
-
 const app = express();
 const port = 3000;
 
