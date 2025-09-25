@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import {pool} from 'pg';
+import {Pool} from 'pg';
 import session from 'express-session'; // Add this line
 
 
