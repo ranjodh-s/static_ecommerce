@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="nav.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/header.ejs') %>
+        <div class="welcome-cont">
+            <div>
+                <p class="welcome-text">Welcome To</p>
+                <h1>The Perfume Store</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit
+                    nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits. </p>
+                <div>Scroll Down</div>
+                <img id="arrow-down" src="media/arrow-down.svg" height="50px" alt="">
+            </div>
+        </div>
+      
+        <div class="cont">
+            <div data-aos="fade-right" class="sec1 product-text">
+                <h2>BANANA REPUBLIC</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit
+                    nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits. </p>
+                <form action="/shop" method="post">
+                    <input type="hidden" name="productImg"
+                        value="https://i.pinimg.com/originals/ff/65/e0/ff65e0c2269433adc04309794735a2a6.png">
+                    <input type="hidden" name="productName" value="BANANA REPUBLIC">
+                    <input type="hidden" name="productPrice" value="120">
+                    <input type="hidden" name="productDesc"
+                        value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits.">
+                    <button class="shop-btn">Shop Now</button>
+                </form>
+            </div>
+            <div data-aos="fade-left" class="sec2">
+                <img class="product-img" height="500px"
+                    src="https://i.pinimg.com/originals/ff/65/e0/ff65e0c2269433adc04309794735a2a6.png"
+                    alt="BANANA REPUBLIC">
+            </div>
+        </div>
+        <div class="cont-reverse">
+            <div data-aos="fade-left" class="sec1 product-text">
+                <h2>BANANA REPUBLIC</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit
+                    nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits. </p>
+                <form action="/shop" method="post">
+                    <input type="hidden" name="productImg"
+                        value="https://png.pngtree.com/background/20230425/original/pngtree-perfume-bottle-plant-flower-fashion-photography-advertising-background-picture-image_2477436.jpg">
+                    <input type="hidden" name="productName" value="Banana Republic">
+                    <input type="hidden" name="productPrice" value="120">
+                    <input type="hidden" name="productDesc"
+                        value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits.">
+                    <button class="shop-btn">Shop Now</button>
+                </form>
+            </div>
+            <div data-aos="fade-right" class="sec2">
+                <img class="product-img" height="500px"
+                    src="https://png.pngtree.com/background/20230425/original/pngtree-perfume-bottle-plant-flower-fashion-photography-advertising-background-picture-image_2477436.jpg"
+                    alt="banana republic">
+            </div>
+        </div>
+        <div class="cont">
+            <div data-aos="fade-right" class="sec1 product-text">
+                <h2>BANANA REPUBLIC</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit
+                    nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits. </p>
+                <form action="/shop" method="post">
+                    <input type="hidden" name="productImg"
+                        value="https://tse2.mm.bing.net/th/id/OIP.c5sMjPE6sfkXdmKddjwxVQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+                    <input type="hidden" name="productName" value="Banana Republic">
+                    <input type="hidden" name="productPrice" value="120">
+                    <input type="hidden" name="productDesc"
+                        value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits.">
+                    <button class="shop-btn">Shop Now</button>
+                </form>
+            </div>
+            <div data-aos="fade-left" class="sec2">
+                <img class="product-img" height="500px"
+                    src="https://tse2.mm.bing.net/th/id/OIP.c5sMjPE6sfkXdmKddjwxVQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="banana republic">
+            </div>
+        </div>
+        <div class="cont-reverse">
+            <div data-aos="fade-left" class="sec1 product-text">
+                <h2>BANANA REPUBLIC</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit
+                    nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits. </p>
+                <form action="/shop" method="post">
+                    <input type="hidden" name="productImg"
+                        value="https://tse1.mm.bing.net/th/id/OIP._-wNhhYnuRvmoX-pRhMtTwHaHa?r=0&w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3">
+                    <input type="hidden" name="productName" value="Banana Republic">
+                    <input type="hidden" name="productPrice" value="120">
+                    <input type="hidden" name="productDesc"
+                        value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits.">
+                    <button class="shop-btn">Shop Now</button>
+                </form>
+            </div>
+            <div data-aos="fade-right" class="sec2">
+                <img class="product-img" height="500px"
+                    src="https://tse1.mm.bing.net/th/id/OIP._-wNhhYnuRvmoX-pRhMtTwHaHa?r=0&w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="banana republic">
+            </div>
+        </div>
+        <div class="cont">
+            <div data-aos="fade-right" class="sec1 product-text">
+                <h2>BANANA REPUBLIC</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit
+                    nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits. </p>
+                <form action="/shop" method="post">
+                    <input type="hidden" name="productImg"
+                        value="https://images.squarespace-cdn.com/content/v1/528f8b33e4b01f2a315145b2/1608189086983-KYSDYQO7SR7PCFELJ7M1/e-commerce-photography-video-content-cosmetics-perfume.jpg">
+                    <input type="hidden" name="productName" value="Banana Republic">
+                    <input type="hidden" name="productPrice" value="120">
+                    <input type="hidden" name="productDesc"
+                        value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum sed dolorem reprehenderit nostrum ex, dolores deleniti, similique recusandae omnis libero consequuntur. Qui sunt odits.">
+                    <button class="shop-btn">Shop Now</button>
+                </form>
+            </div>
+            <div data-aos="fade-left" class="sec2">
+                <img class="product-img" height="500px"
+                    src="https://images.squarespace-cdn.com/content/v1/528f8b33e4b01f2a315145b2/1608189086983-KYSDYQO7SR7PCFELJ7M1/e-commerce-photography-video-content-cosmetics-perfume.jpg"
+                    alt="banana republic">
+            </div>
+        </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,   // animation duration (ms)
+                once: true,       // whether animation should happen only once - while scrolling down
+            });
+        </script>
+</body>
+
+</html>

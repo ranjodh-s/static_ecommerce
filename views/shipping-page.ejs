@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shipping-page.css">
+</head>
+<body>
+    <h1>Enter Shipping Details</h1>
+    <form action="/order" method="post">
+    <div class="product-details">
+        <img src="<%= product.productImg %>" alt="banana republic" height="200px">
+        <div>
+        <h2><%= product.productName %></h2>
+        <p id="price" class="price"></p>
+        <label for="quantity">Quantity:</label>
+        <div class="number-input">
+    <button type="button" class="minus">-</button>
+    <input type="number" name="quantity" value="1" min="1" max="5">
+    <button type="button" class="plus">+</button>
+</div>
+
+        </div>
+    </div>
+    <input type="hidden" name="productName" value="<%= product.productName %>">
+    <input type="hidden" name="productPrice" value="<%= product.productPrice %>">
+    
+        <input type="text" name="customerName" placeholder="Enter your name" required>
+        <input type="text" name="phone" placeholder="Enter your phone number" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="text" name="address" placeholder="Enter your address" required>
+        <input type="text" name="city" placeholder="Enter your city" required>
+        <input type="text" name="state" placeholder="Enter your state" required>
+        <input type="text" name="zip" placeholder="Enter your zip code" required>
+        <button type="submit">Place Order</button>
+    </form>
+
+    <script>
+    //    $(document).ready(function() {
+ 
+    function changePrice(price) {
+            document.getElementById('price').innerText = '$' + price;
+        }
+           
+    const input = document.querySelector('input[type=number]');
+        changePrice(input.value * "<%= product.productPrice %>");
+        // JS to make buttons work
+        document.querySelectorAll('.number-input').forEach(wrapper => {
+    const input = wrapper.querySelector('input[type=number]');
+    wrapper.querySelector('.plus').addEventListener('click', () => {
+        input.stepUp();
+        changePrice(input.value * "<%= product.productPrice %>");
+    });
+    wrapper.querySelector('.minus').addEventListener('click', () => {
+        input.stepDown();
+        changePrice(input.value * "<%= product.productPrice %>");
+    });
+});
+
+
+// });
+    </script>
+</body>
+</html>

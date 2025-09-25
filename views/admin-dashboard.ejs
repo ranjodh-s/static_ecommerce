@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <% if(locals.messages){ %>
+        <div class="messages">
+            <table border="1">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                    </tr>
+            <% messages.forEach(function(message){ %>
+                
+                    <tr>
+                        <td><%= message.name %></td>
+                        <td><%= message.email %></td>
+                        <td><%= message.message %></td>
+                    </tr>
+                </table>
+            <%  }); %>
+        </div>
+    <% }else if(locals.orders){ %>
+        <div class="orders">
+            <table border="1">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Quantity</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Customer Name</th>
+                        <th>Phone no.</th>
+                        <th>Email</th>
+                        <th>Address</th>   
+                        <th>City</th>   
+                        <th>State</th>   
+                        <th>Zip</th>   
+                    </tr>
+            <% orders.forEach(function(order){ %>
+                <tr>
+                    <td><%= order.order_id %></td>
+                    <td><%= order.quantity %></td>
+                    <td><%= order.productname %></td>
+                    <td><%= order.productprice %></td>
+                    <td><%= order.customername %></td>
+                    <td><%= order.phone %></td>
+                    <td><%= order.email %></td>
+                    <td><%= order.address %></td>
+                    <td><%= order.city %></td>
+                    <td><%= order.state %></td>
+                    <td><%= order.zip %></td>
+                </tr>
+            <%  console.log(orders[0].quantity)}); %>
+            </table>
+        </div>
+    <% } %>
+
+                       
+
+    <h1>Admin Dashboard</h1>
+    <h2>Welcome, Admin!</h2>
+    <ul>
+        <li><a href="/admin/orders">View Orders</a></li>
+        <li><a href="/admin/messages">View Messages</a></li>
+        <li><a href="/admin/logout">Logout</a></li>
+    </ul>
+</body>
+</html>

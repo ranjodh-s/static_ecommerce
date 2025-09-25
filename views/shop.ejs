@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="shop.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="cont">
+        <div class="product-img"><img src="<%= product.productImg %>" alt="banana republic"></div>
+        <hr>
+        <div class="product-details">
+            <h1><%= product.productName %></h1>
+            <p><%= product.productDesc %></p>
+            <p class="price">$<%= product.productPrice %></p>
+            <form action="/get-now" method="post">
+                    <input type="hidden" name="productImg"
+                        value="<%= product.productImg %>">
+                    <input type="hidden" name="productName" value="<%= product.productName %>">
+                    <input type="hidden" name="productPrice" value="<%= product.productPrice %>">
+                    <button class="get-now">Get Now</button>
+                </form>
+            <div class="add-details">
+                <div class="detail-list">
+                    <button id="detail-btn-1" class="detail-btn">Detail 1</button>
+                    <div id="detail-1" class="detail hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel culpa illum qui repudiandae ad. Iure quidem perferendis consectetur accusamus maxime.</div>
+                    <button id="detail-btn-2" class="detail-btn">Detail 2</button>
+                    <div id="detail-2" class="detail hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel culpa illum qui repudiandae ad. Iure quidem perferendis consectetur accusamus maxime.</div>
+                    <button id="detail-btn-3" class="detail-btn">Detail 3</button>
+                    <div id="detail-3" class="detail hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel culpa illum qui repudiandae ad. Iure quidem perferendis consectetur accusamus maxime.</div>
+                    <button id="detail-btn-4" class="detail-btn">Detail 4</button>
+                    <div id="detail-4" class="detail hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel culpa illum qui repudiandae ad. Iure quidem perferendis consectetur accusamus maxime.</div>
+                    <button id="detail-btn-5" class="detail-btn">Detail 5</button>
+                    <div id="detail-5" class="detail hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel culpa illum qui repudiandae ad. Iure quidem perferendis consectetur accusamus maxime.</div>
+                </div>
+            </div>
+    </div>
+    </div>
+
+   
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init({
+    duration: 1000,   // animation duration (ms)
+    once: true,       // whether animation should happen only once - while scrolling down
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const detailBtns = document.querySelectorAll(".detail-btn");
+    detailBtns.forEach((btn, idx) => {
+      btn.addEventListener("click", function() {
+        const detailBox = document.getElementById(`detail-${idx + 1}`);
+        if (detailBox.classList.contains("hidden")) {
+          // Hide all details first
+          document.querySelectorAll(".detail").forEach(detail => {
+            detail.classList.add("hidden");
+            detail.classList.remove("show");
+          });
+          // Show this detail
+          detailBox.classList.remove("hidden");
+          detailBox.classList.add("show");
+        } else {
+          // Hide this detail
+          detailBox.classList.add("hidden");
+          detailBox.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
