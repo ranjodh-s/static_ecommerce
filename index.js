@@ -3,15 +3,6 @@ import bodyParser from 'body-parser';
 import {pool} from 'pg';
 import session from 'express-session'; // Add this line
 
-// PostgreSQL connection setup
-// const { Pool } = PG;
-// const pool = new Pool({
-//   user: 'postgres',
-//   host: 'localhost',
-//   database: 'Static E-commerce',
-//   password: 'postgre',
-//   port: 5432,
-// });
 
 const pool = new Pool({
   connectionString: "postgresql://neondb_owner:npg_NO2tcbvumYH5@ep-aged-moon-a17x14tx-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
