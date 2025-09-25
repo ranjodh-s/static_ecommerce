@@ -16,15 +16,15 @@
         <hr>
         <div class="product-details">
             <h1><%= product.productName %></h1>
-            <p><%= product.productDesc %></p>
             <p class="price">$<%= product.productPrice %></p>
             <form action="/get-now" method="post">
-                    <input type="hidden" name="productImg"
-                        value="<%= product.productImg %>">
-                    <input type="hidden" name="productName" value="<%= product.productName %>">
-                    <input type="hidden" name="productPrice" value="<%= product.productPrice %>">
-                    <button class="get-now">Get Now</button>
-                </form>
+              <input type="hidden" name="productImg"
+              value="<%= product.productImg %>">
+              <input type="hidden" name="productName" value="<%= product.productName %>">
+              <input type="hidden" name="productPrice" value="<%= product.productPrice %>">
+              <button class="get-now">Get Now</button>
+            </form>
+            <p><%= product.productDesc %></p>
             <div class="add-details">
                 <div class="detail-list">
                     <button id="detail-btn-1" class="detail-btn">Detail 1</button>
